@@ -1,6 +1,8 @@
 # write description here 
 # write some more 
 
+import sys, time
+
 def delay(): 
     print("Delaying...")
     
@@ -16,9 +18,10 @@ def retro(text):
     
 # Definitions are kept up here ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-print("\nWelcome to the Deterministic Turing Machine Simulator")
-delay()
-print("The machine is set by default to identify the languague a^n b^n c^n, n element No ")
-delay()
+
+print("\n")
+retro("Welcome to the Deterministic Turing Machine Simulator")
+retro("The machine is set by default to identify the languague a^n b^n c^n, n element No")
 word = input("Enter the word you wish to check ")
-print("You wrote: " + word)
+retro("You wrote: " + word)
+
