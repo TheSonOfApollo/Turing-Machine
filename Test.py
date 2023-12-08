@@ -1,14 +1,11 @@
 # This file is used to test new functions, features, etc...
 
-
-print("\n")
-print("Hello World")
-
 def delay_output(text): 
     i = 14000000
     while i > 0:
         i -= 1
     print(text)
+
 
 def retro(text): 
     delay = 10000000
@@ -23,6 +20,9 @@ def retro(text):
 
 
 # Definitions are kept up here ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+print("\n")
+print("Hello World")
 
 print("\n")
 delay_output("This is a test")
