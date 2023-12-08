@@ -1,21 +1,20 @@
 # This file is used to test new functions, features, etc...
 
+import sys, time
+
 def delay_output(text): 
-    i = 14000000
-    while i > 0:
-        i -= 1
+    delayTime = 14000000
+    while delayTime > 0:
+        delayTime -= 1
     print(text)
 
 
 def retro(text): 
-    delay = 10000000
-    i = len(text)
-    k = 0
-    while k < i: 
-        print(text[k])
-        k += 1
-        while delay > 0: 
-            delay -= 1
+    for char in text: 
+        print(char, end="")
+        sys.stdout.flush()
+        time.sleep(0.2) 
+        
 
 
 
