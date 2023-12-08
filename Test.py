@@ -13,7 +13,7 @@ def retro(text):
     for char in text: 
         print(char, end="")
         sys.stdout.flush()
-        time.sleep(0.2) 
+        time.sleep(0.025) 
         
 
 
@@ -23,11 +23,13 @@ def retro(text):
 print("\n")
 print("Hello World")
 
+'''
 print("\n")
 delay_output("This is a test")
 delay_output("This is the second part of the text")
 testNumber = 3
 delay_output("This is the third part of the test, tests until now: " + str(testNumber))
+'''
 
 print("\n") 
 retro("hello this is a retro test")
