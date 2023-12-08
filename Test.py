@@ -26,7 +26,7 @@ def retro(text):
 # Definitions are kept up here ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 print("\n")
-print("Hello World")
+retro("Hello World")
 
 '''
 print("\n")
@@ -47,6 +47,7 @@ print("\n")
 delay_output(retro("The test was succesful!"))
 '''
 
-print("\n") 
 retro("This is another test")
 retro("Now we are testing other things")
+retro("This was the last test, we have a success!")
+retro(";)")
