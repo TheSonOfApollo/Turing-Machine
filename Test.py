@@ -19,7 +19,39 @@ def retro(text):
         delayTime -= 1
     print("\n")
     
-        
+Zustandsmenge = {
+    "Z0" : 0,
+    "Za" : 1,
+    "Zb" : 2, 
+    "Zc" : 3, 
+    "Zr" : "Ende"
+}
+
+def experiment(word): 
+    wordAsList = list(word)
+    i = len(wordAsList)
+    j = 0
+    zustand = 0
+    while j < i: 
+        if wordAsList[0] == "a" and zustand == 0: 
+            wordAsList[0] = "x"
+            j += 1
+            #print("first case") #control purposes only
+            retro(wordAsList)
+        elif wordAsList[j] == "a" and zustand == 0: 
+            wordAsList[j] = "x"
+            j += 1
+            #print("second case") #control purposes only
+            retro(wordAsList)
+              
+            
+            
+            
+        else: 
+            retro("Simulation failed...")
+    retro("Finished.")
+    retro("Simulation success!")
+
 
 
 
@@ -47,7 +79,10 @@ print("\n")
 delay_output(retro("The test was succesful!"))
 '''
 
+'''
 retro("This is another test")
 retro("Now we are testing other things")
 retro("This was the last test, we have a success!")
 retro(";)")
+'''
+experiment("aaa")
