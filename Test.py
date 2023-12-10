@@ -27,7 +27,7 @@ Zustandsmenge = {
     "Zr" : "Ende"
 }
 
-def experiment(word): 
+def DTM(word): 
     wordAsList = list(word)
     i = len(wordAsList)
     j = 0
@@ -36,19 +36,21 @@ def experiment(word):
         if wordAsList[0] == "a" and zustand == 0: 
             wordAsList[0] = "x"
             j += 1
+            zustand = 1
             #print("first case") #control purposes only
             retro(wordAsList)
-        elif wordAsList[j] == "a" and zustand == 0: 
+        elif wordAsList[j] == "a" and zustand == 1: 
             wordAsList[j] = "x"
             j += 1
             #print("second case") #control purposes only
             retro(wordAsList)
-              
+        
             
             
             
         else: 
-            retro("Simulation failed...")
+            retro("Simulation failed...") #infinite loop, could fix with "break" statement but makes it more funny not stopping
+            # semidecidable languague at its finest 
     retro("Finished.")
     retro("Simulation success!")
 
@@ -85,4 +87,4 @@ retro("Now we are testing other things")
 retro("This was the last test, we have a success!")
 retro(";)")
 '''
-experiment("aaa")
+DTM("aaa")
